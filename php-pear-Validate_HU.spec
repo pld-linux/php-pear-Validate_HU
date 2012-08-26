@@ -1,14 +1,11 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		Validate
-%define		_subclass	HU
 %define		_status		alpha
 %define		_pearname	Validate_HU
-
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - Validation class for Hungary
 Summary(pl.UTF-8):	%{_pearname} - Klasa sprawdzająca poprawność dla Węgier
 Name:		php-pear-%{_pearname}
 Version:	0.1.1
-Release:	1
+Release:	2
 Epoch:		0
 License:	New BSD
 Group:		Development/Languages/PHP
@@ -18,7 +15,7 @@ URL:		http://pear.php.net/package/Validate_HU/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-common >= 3:4.1.0
+Requires:	php(core) >= 4.1.0
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +27,7 @@ This class provides methods to validate:
 - Tax number
 - Bank account number
 - SSN number (TAJ szam)
+
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
@@ -58,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/%{_subclass}.php
+%{php_pear_dir}/Validate/HU.php
