@@ -1,6 +1,5 @@
 %define		_status		alpha
 %define		_pearname	Validate_HU
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - Validation class for Hungary
 Summary(pl.UTF-8):	%{_pearname} - Klasa sprawdzająca poprawność dla Węgier
 Name:		php-pear-%{_pearname}
